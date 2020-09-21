@@ -1,3 +1,6 @@
+body{
+    background-color: #222831;
+}
 #calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
