@@ -4,6 +4,9 @@ const operators = document.querySelectorAll(".operator");
 const numbers = document.querySelectorAll(".number");
 const clear = document.querySelector("#clear");
 const equal = document.querySelector("#equal");
+const decimal = document.querySelector("#decimal")
+
+//Global Variables
 
 var displayNumber = 0
 var storedValue = ''
@@ -21,6 +24,15 @@ function displayValue() {
             }
             updateDisplay();
         });
+    });
+}
+
+function addDecimal() {
+    decimal.addEventListener('click', () => {
+        if (displayNumber === 0 || !displayNumber.includes('.')) {
+            displayNumber += decimal.value;
+            updateDisplay();
+        }
     });
 }
 
@@ -67,7 +79,7 @@ function operate() {
     console.log(`Current value is ${displayNumber}`);
 };
 
-function equalSign() {
+function operateWithEqualSign() {
     equal.addEventListener('click', operate);
 };
 
@@ -101,8 +113,8 @@ clearDisplay();
 displayValue();
 storeOperator();
 operate();
-equalSign();
-// isOperatorPresent();
+operateWithEqualSign();
+addDecimal();
 
 // Mathematical Functions
 
