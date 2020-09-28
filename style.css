@@ -6,12 +6,12 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-gap: 5px;
+    grid-gap: 10px;
 
     background-color: black;
     color: #D4D4D2;
     border-radius: 15px;
-    width: 500px;
+    width: 400px;
     margin: 100px auto;
     height: 500px;
     padding: 20px;
@@ -21,7 +21,8 @@ body{
     grid-area: 1 / 1 / 2 / 5;
     text-align: end;
     border-radius: 8px;
-    padding-right: 20px;
+    padding-right: 10px;
+    font-size: 60px;
 }
 
 #zero {
@@ -40,7 +41,7 @@ body{
     background-color: #505050;
     border: 1px solid black;
     color: white;
-    border-radius: 8px;
+    border-radius: 40px;
     text-align: center;
     font-size: medium;
 }

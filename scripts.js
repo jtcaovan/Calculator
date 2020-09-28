@@ -39,7 +39,7 @@ function addDecimal() {
 function storeOperator () {
     operators.forEach((operator) => {
         operator.addEventListener('click', operator => {
-            if (currentOperator !== '') {
+            if (currentOperator !== '') { 
                 operate();
                 storeValue();
                 displayNewValue();
@@ -50,8 +50,6 @@ function storeOperator () {
                 storeValue();
                 displayNewValue();
             }
-            console.log(`Stored value is ${storedValue}`);
-            console.log(`Current operator is ${currentOperator}`);
         })
     });
 }
@@ -70,7 +68,11 @@ function operate() {
             displayNumber = multiply(storedValue, currentValue);
             break;
         case '/':
-            displayNumber = divide(storedValue, currentValue);
+            if (currentValue == 0) {
+                displayNumber = '(╯°□°）╯';
+            } else {
+                displayNumber = divide(storedValue, currentValue);
+            }
             break;
     }
 
@@ -119,17 +121,17 @@ addDecimal();
 // Mathematical Functions
 
 function add(a,b) {
-    return parseFloat(a) + parseFloat(b);
+    return parseFloat(a + b);
 }
 
 function subtract(a,b) {
-    return parseFloat(a) - parseFloat(b);
+    return parseFloat(a - b);
 }
 
 function multiply(a,b) {
-    return parseFloat(a) * parseFloat(b);
+    return parseFloat(a * b)
 }
 
 function divide(a,b) {
-    return parseFloat(a) / parseFloat(b);
+    return parseFloat(a / b);
 }
