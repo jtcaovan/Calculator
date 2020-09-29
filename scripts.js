@@ -6,15 +6,12 @@ const clear = document.querySelector("#clear");
 const equal = document.querySelector("#equal");
 const decimal = document.querySelector("#decimal")
 
-//Global Variables
-
-var displayNumber = 0
+var displayNumber = 0;
 var storedValue = ''
 var currentValue = ''
 var currentOperator = ''
 
 function displayValue() {
-    // Populates display when numbers are clicked
     numbers.forEach((number) => {
         number.addEventListener('click', number => {
             if (displayNumber === 0) {
@@ -24,15 +21,6 @@ function displayValue() {
             }
             updateDisplay();
         });
-    });
-}
-
-function addDecimal() {
-    decimal.addEventListener('click', () => {
-        if (displayNumber === 0 || !displayNumber.includes('.')) {
-            displayNumber += decimal.value;
-            updateDisplay();
-        }
     });
 }
 
@@ -55,7 +43,6 @@ function storeOperator () {
 }
 
 function operate() {
-    // Stores Current Value from display to get calculated
     currentValue = displayNumber;
     switch(currentOperator) {
         case '+':
@@ -75,14 +62,7 @@ function operate() {
             }
             break;
     }
-
     updateDisplay();
-    // Test
-    console.log(`Current value is ${displayNumber}`);
-};
-
-function operateWithEqualSign() {
-    equal.addEventListener('click', operate);
 };
 
 function displayNewValue() {
@@ -110,28 +90,39 @@ function clearDisplay() {
     })
 }
 
+// Operates when equal button is clicked
+equal.addEventListener('click', operate);
+
+// Adds decimal to display
+decimal.addEventListener('click', () => {
+    if (displayNumber === 0 || !displayNumber.includes('.')) {
+        displayNumber += decimal.value;
+        updateDisplay();
+    }
+});
+
 updateDisplay();
 clearDisplay();
 displayValue();
 storeOperator();
 operate();
-operateWithEqualSign();
-addDecimal();
-
-// Mathematical Functions
 
 function add(a,b) {
-    return parseFloat(a + b);
+    result = parseFloat(a) + parseFloat(b);
+    return parseFloat(result.toFixed(7));
 }
 
 function subtract(a,b) {
-    return parseFloat(a - b);
+    result = parseFloat(a) - parseFloat(b);
+    return parseFloat(result.toFixed(7));
 }
 
 function multiply(a,b) {
-    return parseFloat(a * b)
+    result = parseFloat(a) * parseFloat(b);
+    return parseFloat(result.toFixed(7));
 }
 
 function divide(a,b) {
-    return parseFloat(a / b);
+    result = parseFloat(a)/parseFloat(b);
+    return parseFloat(result.toFixed(7));
 }
