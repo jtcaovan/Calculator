@@ -66,7 +66,6 @@ function operate() {
 };
 
 function displayNewValue() {
-    // Populate display with new Current Value
     if (currentOperator != '' && storedValue != '') {
         displayNumber = 0
     }
