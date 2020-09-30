@@ -12,4 +12,4 @@ Calculator inspired by IOS design
     Future features:
         1) Add +/- functionality
         2) Add % functionality
-        3) Refactor for cleaner, maintainable code
+        3) Refactor for cleaner, maintainable code.
