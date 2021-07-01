@@ -1,15 +1,24 @@
 # Calculator
 
-Calculator inspired by IOS design
+## Live Demo: https://jtcaovan.github.io/Calculator/
 
-    Simple project created with Vanilla JS, HTML and CSS.
+## Description 
 
-    Helped solidify knowledge of:
-        1) DOM manipulation and event listeners
-        2) CSS Grid
-        3) JS functions
+A basic calculator application modeled after the Apple calculator design. 
 
-    Future features:
-        1) Add +/- functionality
-        2) Add % functionality
-        3) Refactor for cleaner, maintainable code.
+## Learning Outcomes
+* Solidify fundamental JavaScript knowledge including:
+    * DOM manipulation
+    * Event listeners
+* CSS Grid
+
+## Features
+* Basic use of addition, subtraction, multiplication, division
+* Clear functionality 
+* Displays error message if user divides by 0
+
+# Future Updates
+* Add +/= functionality
+* Add % functionality
+* Add full keyboard support
+* Refactor for cleaner, maintainable code
