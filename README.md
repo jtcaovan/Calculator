@@ -23,4 +23,6 @@ A basic calculator application modeled after the Apple calculator design.
 * Add full keyboard support
 * Refactor for cleaner, maintainable code
 
+## Screenshots 
+
 ![Screen Shot 2021-07-01 at 3 22 02 PM](https://user-images.githubusercontent.com/61437879/124195875-1a7cfd00-da80-11eb-8136-aba781b6eb92.png)
