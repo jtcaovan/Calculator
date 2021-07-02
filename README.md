@@ -7,7 +7,7 @@
 A basic calculator application modeled after the Apple calculator design. 
 
 ## Learning Outcomes
-* Solidify fundamental JavaScript knowledge including:
+* Solidify fundamental Vanilla JavaScript knowledge including:
     * DOM manipulation
     * Event listeners
 * CSS Grid
@@ -18,10 +18,11 @@ A basic calculator application modeled after the Apple calculator design.
 * Displays error message if user divides by 0
 
 ## Future Updates
+* Limit the amount of global variables
+* Refactor for cleaner, maintainable code
 * Add +/= functionality
 * Add % functionality
 * Add full keyboard support
-* Refactor for cleaner, maintainable code
 
 ## Screenshots 
 
