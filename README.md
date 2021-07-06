@@ -19,7 +19,7 @@ A basic calculator application modeled after the Apple calculator design.
 
 ## Future Updates
 * Limit the amount of global variables
-* Refactor for cleaner, maintainable code
+* Refactor for cleaner, maintainable code - split code into multiple files
 * Add +/= functionality
 * Add % functionality
 * Add full keyboard support
